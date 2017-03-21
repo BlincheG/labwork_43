@@ -1,0 +1,16 @@
+<table border="1">
+<tr>
+<td>Кафе</td>  
+<td>Описание</td>  
+<td>Фотография</td>  
+</tr>
+
+<% @caves.each do |cafe| %>
+<tr>
+<td><%= link_to cafe.name, cafe_path(cafe) %></td>
+<td><%= cafe.desc %></td>
+<td><%= image_tag cafe.image.url(:medium) %></td>
+</tr>
+<% end %>
+
+</table>
